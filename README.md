@@ -12,7 +12,7 @@ The fleet's Cloudflare Workers & Pages deployments (wave-64 token handoff).
 
 ## Banked gotchas (wave-64, receipted)
 
-- The new `cfut_…` token passes `/user/tokens/verify` (the OLD one failed 6111) — use
+- The new `CLOUDFLARE_API_TOKEN` (cfut-prefix) token passes `/user/tokens/verify` (the OLD one failed 6111) — use
   `CLOUDFLARE_API_TOKEN`; wrangler 4.146 confirmed: "You are logged in with an User API Token".
 - **Credentialed CORS**: erised calls `fetch(..., {credentials:'include'})` — a wildcard
   `Access-Control-Allow-Origin: *` is invalid there and the browser strips the body
